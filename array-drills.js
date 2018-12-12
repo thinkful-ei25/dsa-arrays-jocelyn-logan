@@ -5,6 +5,7 @@
 // Output: tauhida%20parveen
 // input: www.thinkful.com /tauh ida parv een
 // output: www.thinkful.com%20/tauh%20ida%20parv%20een
+// O(n)
 function urlifyString(string) {
   let url = '';
   for (let i = 0; i < string.length; i++) {
@@ -24,17 +25,38 @@ function urlifyString(string) {
 //filtering an array 
 //input: [1,2,5,5,8]
 //output: [5,5,8]
-
-function filterArray(arr){
+// O(n)
+function filterArray(arr) {
   let filteredArr = [];
-  for (let i = 0; i < arr.length; i++){
-    if(arr[i] >= 5) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= 5) {
       filteredArr.push(arr[i]);
     }
-  }    return filteredArr;
+  } return filteredArr;
 
 }
 
 // console.log(filterArray([1,2,5,5,8])); 
+
+// Max sum in the array 
+// Input: [4,6,-3,5,-2,1]
+// Output: 12 = 4+6+-3+5
+// O(n)
+function maxSum(arr) {
+  let currentMax = 0;
+  let max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    currentMax += arr[i];
+    if (currentMax > max) {
+      max = currentMax;
+    }
+  }
+
+  return max;
+}
+
+// console.log(maxSum([4, 6, -3, 5, -2, 1]));
+
+
 
 
