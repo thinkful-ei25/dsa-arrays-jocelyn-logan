@@ -162,4 +162,30 @@ function twodArray(arr) {
   return arr;
 }
 
-console.log(twodArray([[1, 0, 1, 1, 0], [0, 1, 1, 1, 0], [1, 1, 1, 1, 1], [1, 0, 1, 1, 1], [1, 1, 1, 1, 1]]));
+// console.log(twodArray([[1, 0, 1, 1, 0], [0, 1, 1, 1, 0], [1, 1, 1, 1, 1], [1, 0, 1, 1, 1], [1, 1, 1, 1, 1]]));
+
+//stringRotation
+//input: amazon, azonma
+//Output: False 
+// this is python but rlly nice <3 return len(s1)==len(s2) and s1 in 2*s2
+//O(n)
+
+function stringRotation(str1, str2){
+  if(str1.length !== str2.length) return false; 
+
+  let subby=str1;
+
+  for(let i = 0 ; i < str1.length ; i++){
+    subby = subby.substring(1) + subby[0];
+    if(subby === str2){
+      return true; 
+    }
+  
+ 
+  }
+
+  return false; 
+  
+}
+
+// console.log(stringRotation('amazon', 'azonam')); 
