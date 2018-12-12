@@ -87,7 +87,7 @@ function main() {
   arr.push(19);
   arr.push(45);
   arr.push(10);
-  //console.log(arr);
+  // console.log(arr);
   // What is the length, capacity and address of your array? 
   // Explain the result of your program after adding the new lines of code
 
@@ -95,9 +95,9 @@ function main() {
   // length decreased in size because we removed values from the array with pop
   // capacity is the same as before as we did not change it when length decreases in the pop method
   // memory is the same as we didn't chance capacity
-  arr.pop();
-  arr.pop();
-  arr.pop();
+  // arr.pop();
+  // arr.pop();
+  // arr.pop();
   // console.log(arr);
 
   // Print the first item in the array arr.
@@ -112,7 +112,7 @@ function main() {
 
   //What is the purpose of the _resize() function in your Array class?
   //To change capacity, to free up old memory space and create new memory space for what we need
-
+  // resize is with underscore because: its private therefore shouldnt be used in other classes (javascript doesnt have it, this is just convention)
 
   // // pop testing
   // arr.pop();
