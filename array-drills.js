@@ -17,7 +17,24 @@ function urlifyString(string) {
   return url;
 }
 
-console.log(urlifyString('tauhida parveen'));
-console.log(urlifyString('www.thinkful.com /tauh ida parv een'));
+// console.log(urlifyString('tauhida parveen'));
+// console.log(urlifyString('www.thinkful.com /tauh ida parv een'));
+
+
+//filtering an array 
+//input: [1,2,5,5,8]
+//output: [5,5,8]
+
+function filterArray(arr){
+  let filteredArr = [];
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i] >= 5) {
+      filteredArr.push(arr[i]);
+    }
+  }    return filteredArr;
+
+}
+
+// console.log(filterArray([1,2,5,5,8])); 
 
 
