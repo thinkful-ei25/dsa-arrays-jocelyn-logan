@@ -101,17 +101,65 @@ function removeCharacters(string, filter) {
 //Output:[108, 36, 12, 27]
 //O(n)
 
-function products(arr){
-  let totalProduct= 1; 
+function products(arr) {
+  let totalProduct = 1;
 
-  for(let i = 0 ; i < arr.length ; i++){
-    totalProduct*=arr[i]; 
+  for (let i = 0; i < arr.length; i++) {
+    totalProduct *= arr[i];
   }
   let realProducts = [];
-  for(let j = 0; j < arr.length ; j++){
-    realProducts.push(totalProduct/arr[j]); 
+  for (let j = 0; j < arr.length; j++) {
+    realProducts.push(totalProduct / arr[j]);
   }
-  return realProducts; 
+  return realProducts;
 }
 
 // console.log(products([1, 3, 9, 4]));
+
+//2d Array
+// Input:
+// [[1,0,1,1,0],
+// [0,1,1,1,0],
+// [1,1,1,1,1],
+// [1,0,1,1,1],
+// [1,1,1,1,1]];
+// Output:
+// [[0,0,0,0,0],
+// [0,0,0,0,0],
+// [0,0,1,1,0],
+// [0,0,0,0,0],
+// [0,0,1,1,0]];
+// 2 loops
+// define 2 empty arrays: rows and columns
+// loop 1 :for i from 0 to array.length
+// loop 2: for j from 0 to array[i].length
+// if theres any array[i][j] === 0 then rows
+// rows.push(i)
+// O(n^2)
+function twodArray(arr) {
+  let rows = [];
+  let columns = [];
+  //console.log(arr);
+  for (let i = 0; i < arr.length; i++) {
+    //console.log(arr[i].length);
+    for (let j = 0; j < arr[i].length; j++) {
+      if (arr[i][j] === 0) {
+        rows.push(i);
+        columns.push(j);
+      }
+    }
+  }
+  // console.log(rows);
+  // console.log(columns);
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (rows.includes(i) || columns.includes(j)) {
+        arr[i][j] = 0;
+      }
+    }
+  }
+
+  return arr;
+}
+
+console.log(twodArray([[1, 0, 1, 1, 0], [0, 1, 1, 1, 0], [1, 1, 1, 1, 1], [1, 0, 1, 1, 1], [1, 1, 1, 1, 1]]));
