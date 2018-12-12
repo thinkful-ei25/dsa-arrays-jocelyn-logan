@@ -59,4 +59,20 @@ function maxSum(arr) {
 
 
 
+//mergeArrays 
+//Input:[1, 3, 6, 8, 11] and [2, 3, 5, 8, 9, 10]
+//Output:[1, 2, 3, 3, 5, 6, 8, 8, 9, 10, 11]
+
+function mergeArrays(arr1, arr2){
+  // let finalArray = []; 
+  // for ( let i = 0; i<arr1.length; i++){
+  //   finalArray.push[arr1[i]];
+  //   for (let j = 0; j<arr2.length; i++){
+  //     finalArray.push[arr2[j]]; 
+  //   }
+  // }
+  return arr1.concat(arr2).sort(function(a, b){return a - b;}); 
+}
+
+// console.log(mergeArrays([1, 3, 6, 8, 11],[2, 3, 5, 8, 9, 10]));
 
