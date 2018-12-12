@@ -94,4 +94,24 @@ function removeCharacters(string, filter) {
   return newString;
 }
 
-console.log(removeCharacters('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'));
+// console.log(removeCharacters('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'));
+
+
+//Input:[1, 3, 9, 4]
+//Output:[108, 36, 12, 27]
+//O(n)
+
+function products(arr){
+  let totalProduct= 1; 
+
+  for(let i = 0 ; i < arr.length ; i++){
+    totalProduct*=arr[i]; 
+  }
+  let realProducts = [];
+  for(let j = 0; j < arr.length ; j++){
+    realProducts.push(totalProduct/arr[j]); 
+  }
+  return realProducts; 
+}
+
+// console.log(products([1, 3, 9, 4]));
