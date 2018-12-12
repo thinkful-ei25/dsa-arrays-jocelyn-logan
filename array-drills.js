@@ -62,8 +62,8 @@ function maxSum(arr) {
 //mergeArrays 
 //Input:[1, 3, 6, 8, 11] and [2, 3, 5, 8, 9, 10]
 //Output:[1, 2, 3, 3, 5, 6, 8, 8, 9, 10, 11]
-
-function mergeArrays(arr1, arr2){
+// concat is O(n), depending on engine for sorting sort can be O(n^2) or O(n log n)
+function mergeArrays(arr1, arr2) {
   // let finalArray = []; 
   // for ( let i = 0; i<arr1.length; i++){
   //   finalArray.push[arr1[i]];
@@ -71,8 +71,27 @@ function mergeArrays(arr1, arr2){
   //     finalArray.push[arr2[j]]; 
   //   }
   // }
-  return arr1.concat(arr2).sort(function(a, b){return a - b;}); 
+  return arr1.concat(arr2).sort(function (a, b) { return a - b; });
 }
 
 // console.log(mergeArrays([1, 3, 6, 8, 11],[2, 3, 5, 8, 9, 10]));
 
+//remove characters
+//Input:'Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'
+// Output: 'Bttl f th Vwls: Hw vs. Grzny'
+// O(n)
+function removeCharacters(string, filter) {
+  let filterArray = [];
+  for (let i = 0; i < filter.length; i++) {
+    filterArray.push(filter[i]);
+  }
+  let newString = '';
+  for (let i = 0; i < string.length; i++) {
+    if (!filterArray.includes(string[i])) {
+      newString += string[i];
+    }
+  }
+  return newString;
+}
+
+console.log(removeCharacters('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'));
